@@ -1,3 +1,4 @@
 shop-app-client/package-lock.json
 .idx/dev.nix
 .vscode/settings.json
+shop-app-server/package-lock.json
