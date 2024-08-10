@@ -1,9 +1,9 @@
-import './App.scss';
 // import Home from './pages/Home';
 import SideNavigation from './components/SideNavigation';
 import { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import './App.scss';
 // import PageNotFound from './pages/PageNotFound';
 // import { Route, Routes } from 'react-router-dom';
 // import Login from './pages/Login';
