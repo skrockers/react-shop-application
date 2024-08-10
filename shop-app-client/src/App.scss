@@ -1,0 +1,21 @@
+@import './scss/home/home.scss';
+@import './scss/header';
+@import './scss/button';
+@import './scss/variables';
+@import './scss/side-navigation';
+@import './scss/footer';
+@import './scss/navigation-bar';
+@import './scss/error/errors';
+@import './scss/main-content';
+@import './scss/account/login';
+@import './scss/account/signup';
+@import './scss/banner-ads/login-banner';
+@import './scss/spinner';
+@import './scss/account/dashboard';
+
+
+.main-shop-app{
+    width: 100%;
+    @include site_font_fira_regular;
+    
+}

@@ -1,24 +1,34 @@
-import React, { useState } from 'react';
-import './App.css';
-
+import './App.scss';
+// import Home from './pages/Home';
+import SideNavigation from './components/SideNavigation';
+import { useState } from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+// import PageNotFound from './pages/PageNotFound';
+// import { Route, Routes } from 'react-router-dom';
+// import Login from './pages/Login';
+// import Signup from './pages/Signup';
+// import Cart from './pages/Cart';
+import MainContent from './components/MainContent';
 function App() {
-// This URL is copied from the side panel showing the backend ports view
-const WORKSPACE_URL = "https://6500-idx-react-shop-application-1722227155960.cluster-bec2e4635ng44w7ed22sa22hes.cloudworkstations.dev";
+  const [displayNav, setDisplayNav] = useState(false)
+  const displayNavHandler = (value) =>{
+    setDisplayNav(value)
 
-async function get(url) {
-  const response = await fetch(url, {
-    credentials: 'include',
-  });
-  const data = await response.json();
-  console.log(data);
- 
-}
-
-// Call the backend
-get(WORKSPACE_URL);
+  }
+  const closeNavHandler = (value) =>{
+    setDisplayNav(value)
+  }
   return (
-    <div className="App">
-      <h1>Shop App : </h1>
+    <div className="main-shop-app">
+      <Header  
+      displayNav={displayNav}
+      displayNavHandler ={displayNavHandler}/>
+      <SideNavigation 
+      displayNav={displayNav} 
+      closeNavHandler={closeNavHandler}/> 
+    <MainContent />
+      <Footer/>
     </div>
   );
 }
